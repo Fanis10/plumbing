@@ -1904,6 +1904,22 @@ li {
   color: #000;
 }
 
+.nav {
+  padding: 50px 0;
+}
+.nav__inner ul li {
+  font-size: 24px;
+  line-height: 120%;
+  color: #000;
+}
+.nav__inner ul li:not(:first-child) {
+  margin-top: 10px;
+}
+.nav__inner ul li a:hover {
+  color: #008778;
+  transition: all 0.3s;
+}
+
 .hover__item-img {
   display: none;
   overflow: hidden;
