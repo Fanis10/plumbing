@@ -17,14 +17,14 @@ function sliderMainOne() {
 let cartSlidersArray = []
 
 function cartSliders() {
-    $(".basket__clause").each(function(index, el) {
+    $(".basket__block").each(function(index, el) {
         $(el).attr("data-slider-id", index)
-        cartSlidersArray[index] = new Swiper(`.basket__clause[data-slider-id = "${index}"] .swiper`, {
+        cartSlidersArray[index] = new Swiper(`.basket__block[data-slider-id = "${index}"] .swiper`, {
             slidesPerView: 1,
             centeredSlides: 'true',
             loop: true,
             pagination: {
-                el: `.basket__clause[data-slider-id = "${index}"] .swiper-pagination`,
+                el: `.basket__block[data-slider-id = "${index}"] .swiper-pagination`,
                 clickable: true,
             },
         })
