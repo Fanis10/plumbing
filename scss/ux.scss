@@ -78,7 +78,7 @@
     height: 100vh;
     background-color: #ffffff;
     overflow-y: auto;
-    z-index: 4;
+    z-index: 10;
     padding: 30px 0;
     &--active {
         left: 0;
@@ -111,13 +111,11 @@
     &-item {
         display: flex;
     }
-    &-subtitle {
-        display: flex;
-        align-items: center;
-    }
     &-img {
         margin-right: 10px;
         svg {
+            width: 80px;
+            height: auto;
             path {
                 fill: #008778;
             }
@@ -126,6 +124,7 @@
     &-subtitle {
         font-size: 18px;
         line-height: 120%;
+        font-weight: 700;
         color: #000;
         margin-bottom: 15px;
     }
@@ -296,7 +295,7 @@
             }
         }
         &-text {
-            font-size: 11px;
+            font-size: 16px;
             line-height: 120%;
             color: #6e6f70;
             margin-top: 5px;
@@ -413,6 +412,14 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .product-catalog__content {
+        &-items {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
+
 @media screen and (max-width: 1080px) {
     .products {
         &__blocks {
@@ -425,6 +432,12 @@
     .products {
         &__blocks {
             grid-template-columns: repeat(2, calc(50% - (30px / 2)));
+        }
+    }
+    .product-catalog__content {
+        &-items {
+            grid-template-columns: 1fr 1fr;
+            margin-top: 15px;
         }
     }
     .breadcrumbs {
@@ -446,6 +459,26 @@
         span {
             font-size: 12px;
             margin-left: 5px;
+        }
+    }
+    .product-catalog__content {
+        &-logo {
+            svg {
+                width: 250px;
+            }
+        }
+        &-title {
+            font-size: 20px;
+            margin-top: 15px;
+        }
+        &-subtitle {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        &-list {
+            li {
+                font-size: 12px;
+            }
         }
     }
     .products {
@@ -495,6 +528,17 @@
     .products {
         &__blocks {
             grid-template-columns: repeat(1, 100%);
+        }
+    }
+    .product-catalog__content {
+        padding: 15px 0;
+        &-logo {
+            svg {
+                width: 240px;
+            }
+        }
+        &-items {
+            grid-template-columns: 1fr;
         }
     }
     .form {

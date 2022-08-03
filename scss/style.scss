@@ -7,7 +7,7 @@
     @import 'ux';
     .product-catalog {
         &__inner {
-            padding: 100px 0;
+            padding: 100px 30px;
             display: flex;
             align-items: center;
             background-image: url(../img/bg.webp);
@@ -288,10 +288,11 @@
     
     @media screen and (max-width: 992px) {
         .product-catalog {
-            &__content {
-                &-items {
-                    grid-template-columns: 1fr 1fr 1fr;
-                }
+            &__inner {
+                display: block;
+            }
+            &__form {
+                margin-top: 10px;
             }
         }
         .brands {
@@ -302,32 +303,6 @@
     }
     
     @media screen and (max-width: 768px) {
-        .product-catalog {
-            &__content {
-                &-logo {
-                    svg {
-                        width: 250px;
-                    }
-                }
-                &-title {
-                    font-size: 20px;
-                    margin-top: 15px;
-                }
-                &-items {
-                    grid-template-columns: 1fr 1fr;
-                    margin-top: 15px;
-                }
-                &-subtitle {
-                    font-size: 16px;
-                    margin-bottom: 5px;
-                }
-                &-list {
-                    li {
-                        font-size: 12px;
-                    }
-                }
-            }
-        }
         .categories {
             padding: 20px 0 0;
             &__items {
@@ -431,6 +406,10 @@
         .product-catalog {
             &__inner {
                 display: block;
+                padding: 80px 15px;
+            }
+            &__form {
+                margin-top: 5px;
             }
             &__btn {
                 margin-bottom: 5px;
@@ -438,17 +417,6 @@
             &__btn-close {
                 svg {
                     width: 25px;
-                }
-            }
-            &__content {
-                padding: 15px 0;
-                &-logo {
-                    svg {
-                        width: 240px;
-                    }
-                }
-                &-items {
-                    grid-template-columns: 1fr;
                 }
             }
         }
