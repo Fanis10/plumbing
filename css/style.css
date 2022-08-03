@@ -1478,7 +1478,7 @@ li {
   font-size: 16px;
   line-height: 120%;
   font-weight: 500;
-  color: #000;
+  color: #6e6f70;
   margin-left: 5px;
 }
 .products-content__item-title {
@@ -1501,6 +1501,7 @@ li {
 }
 .products-content__item-info p:nth-child(1) span {
   color: #000;
+  font-weight: 700;
 }
 .products-content__item-info p:nth-child(2) {
   font-size: 14px;
@@ -1509,6 +1510,7 @@ li {
 }
 .products-content__item-info p:nth-child(2) span {
   color: #000;
+  font-weight: 700;
 }
 .products-content__item-delivery {
   font-size: 14px;
