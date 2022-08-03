@@ -132,6 +132,7 @@
         background-color: #ffffff;
         display: flex;
         padding: 10px;
+        border-radius: 5px;
         &:not(:first-child) {
             margin-top: 15px;
         }
@@ -161,18 +162,20 @@
     }
     &__block {
         &-title {
-            font-size: 16px;
+            font-size: 18px;
             line-height: 120%;
+            font-weight: 700;
             color: #000;
         }
         &-info {
             margin-top: 7px;
             p {
-                font-size: 14px;
+                font-size: 16px;
                 line-height: 120%;
                 color: #6e6f70;
                 span {
                     color: #000;
+                    font-weight: 700;
                 }
                 &:not(:first-child) {
                     margin-top: 5px;
@@ -184,13 +187,13 @@
         span {
             display: block;
             &:nth-child(1) {
-                font-size: 20px;
+                font-size: 24px;
                 line-height: 120%;
-                font-weight: 500;
+                font-weight: 700;
                 color: #000;
             }
             &:nth-child(2) {
-                font-size: 14px;
+                font-size: 18px;
                 line-height: 120%;
                 color: #6e6f70;
                 text-align: end;
@@ -205,7 +208,7 @@
         margin: 0;
         span {
             margin-left: 5px;
-            font-size: 14px;
+            font-size: 16px;
         }
         svg {}
         &:not(:first-child) {
@@ -287,18 +290,18 @@
                 margin-left: 15px;
             }
             &-title {
-                font-size: 16px;
+                font-size: 18px;
                 line-height: 120%;
                 color: #000;
             }
             &-text {
-                font-size: 12px;
+                font-size: 14px;
                 line-height: 120%;
                 color: #000;
                 margin-top: 15px;
             }
             &-info {
-                font-size: 12px;
+                font-size: 14px;
                 line-height: 120%;
                 color: #008778;
             }
@@ -346,7 +349,7 @@
                 justify-content: space-between;
             }
             &-title {
-                font-size: 14px;
+                font-size: 16px;
                 line-height: 120%;
                 color: #000;
             }
@@ -354,7 +357,7 @@
                 span:nth-child(1) {
                     font-size: 20px;
                     line-height: 120%;
-                    font-weight: 500;
+                    font-weight: 700;
                     color: #000;
                     display: block;
                 }
@@ -374,11 +377,24 @@
                 color: #ffffff;
                 margin-top: 30px;
                 font-size: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                svg {
+                    path {
+                        fill: #6e6f70;
+                    }
+                }
                 &:hover {
                     background-color: #ffffff;
                     color: #008778;
                     border: 1px solid #008778;
                     transition: all 0.3s;
+                    svg {
+                        path {
+                            fill: #008778;
+                        }
+                    }
                 }
             }
         }
@@ -393,14 +409,14 @@
                     width: 200px;
                     height: 45px;
                     padding: 0 15px;
-                    font-size: 14px;
+                    font-size: 16px;
                 }
                 button {
                     height: 45px;
                     width: 150px;
                     text-align: center;
                     margin-left: 15px;
-                    font-size: 14px;
+                    font-size: 16px;
                     color: #000;
                     &:hover {
                         background-color: #008778;
@@ -425,7 +441,7 @@
     }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1150px) {
     .basket {
         &__desc {
             &-inner {
@@ -532,8 +548,13 @@
                     }
                 }
                 &-btn {
+                    margin-top: 15px;
                     height: 35px;
                     font-size: 12px;
+                    svg {
+                        height: 35px;
+                        width: 35px;
+                    }
                 }
             }
             .switch {

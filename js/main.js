@@ -14,6 +14,74 @@ function sliderMainOne() {
     })
 }
 
+let cardProductsArray = []
+
+function cardProducts() {
+    $(".products__block").each(function(index, el) {
+        $(el).attr("data-slider-id", index)
+        cardProductsArray[index] = new Swiper(`.products__block[data-slider-id = "${index}"] .swiper`, {
+            slidesPerView: 1,
+            centeredSlides: 'true',
+            loop: true,
+            pagination: {
+                el: `.products__block[data-slider-id = "${index}"] .swiper-pagination`,
+                clickable: true,
+            },
+        })
+    })
+};
+
+let cardProducts2Array = []
+
+function cardProducts2() {
+    $(".products-card__block").each(function(index, el) {
+        $(el).attr("data-slider-id", index)
+        cardProducts2Array[index] = new Swiper(`.products-card__block[data-slider-id = "${index}"] .swiper`, {
+            slidesPerView: 1,
+            centeredSlides: 'true',
+            loop: true,
+            pagination: {
+                el: `.products-card__block[data-slider-id = "${index}"] .swiper-pagination`,
+                clickable: true,
+            },
+        })
+    })
+};
+
+let cardProducts3Array = []
+
+function cardProducts3() {
+    $(".products-card2__block").each(function(index, el) {
+        $(el).attr("data-slider-id", index)
+        cardProducts3Array[index] = new Swiper(`.products-card2__block[data-slider-id = "${index}"] .swiper`, {
+            slidesPerView: 1,
+            centeredSlides: 'true',
+            loop: true,
+            pagination: {
+                el: `.products-card2__block[data-slider-id = "${index}"] .swiper-pagination`,
+                clickable: true,
+            },
+        })
+    })
+};
+
+let cardProducts4Array = []
+
+function cardProducts4() {
+    $(".products-promotions__block").each(function(index, el) {
+        $(el).attr("data-slider-id", index)
+        cardProducts4Array[index] = new Swiper(`.products-promotions__block[data-slider-id = "${index}"] .swiper`, {
+            slidesPerView: 1,
+            centeredSlides: 'true',
+            loop: true,
+            pagination: {
+                el: `.products-promotions__block[data-slider-id = "${index}"] .swiper-pagination`,
+                clickable: true,
+            },
+        })
+    })
+};
+
 let cartSlidersArray = []
 
 function cartSliders() {
@@ -71,15 +139,19 @@ function sliderProducts() {
 $(document).ready(function() {
 
     sliderMainOne();
+    cardProducts();
+    cardProducts2();
+    cardProducts3();
+    cardProducts4();
     cartSliders();
     cardSliders();
     sliderProducts();
+
 
     // Menu
     $(".header-bottom__burger").click(function() {
         $(this).toggleClass("header-bottom__burger--active")
         $(".header-bottom__nav").toggleClass("header-bottom__nav--active")
-        $(".header-top__center").toggleClass("header-top__center--active")
         $("body").toggleClass("fixed-body")
     })
 
@@ -87,8 +159,9 @@ $(document).ready(function() {
     $(".product-catalog__btn").click(function() {
         $(".product-catalog__btn-close").addClass("product-catalog__btn-close--active")
         $(".product-catalog__content").addClass("product-catalog__content--active")
+        $(".header-top__center").removeClass("header-top__center--active")
+        $(".header-bottom__burger").removeClass("header-bottom__burger--active")
         $("body").toggleClass("fixed-body")
-
     })
 
     $(".product-catalog__btn-close").click(function() {
@@ -102,9 +175,14 @@ $(document).ready(function() {
         $(this).toggleClass("products__item-like--active")
     })
 
+    $(".furniture__item-like").click(function() {
+        $(this).toggleClass("furniture__item-like--active")
+    })
+
     $(".basket__btn-check").click(function() {
         $(this).toggleClass("basket__btn-check--active")
     })
+
 
     function cartCalc() {
         $('.cartcalc .ccalc-minus').click(function() {
